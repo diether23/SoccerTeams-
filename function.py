@@ -11,14 +11,6 @@ lstTeamNames = ["UVU",
 
 def choose_team(teams,removed_team=None) :
     print("Here is the list of teams to choose from")
-    for teams in lstTeamNames:
-        print(teams)
-    print(" ")
-    team = input("Pick a team: ").strip()
-    if team in lstTeamNames: 
-        lstTeamNames.remove(team)
-    else :
-     return     # Remove that team from the list. 
     if removed_team is not None and removed_team in teams: 
         teams = [team for team in teams if team != {removed_team}]
     #Display list of all teams and allow the user to choose a team using a menu. 
